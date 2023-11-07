@@ -1,0 +1,111 @@
+ ATIVIDADE 1
+valor1 = float(input("Digite o primeiro valor: "))
+valor2 = float(input("Digite o segundo valor: "))
+
+if valor1 > valor2:
+    maior_valor = valor1
+else:
+    maior_valor = valor2
+
+print("O maior valor é:", maior_valor
+ATIVIDADE 2
+ano_nascimento = int(input("Digite o ano de nascimento: "))
+
+ano_atual = 2023
+idade = ano_atual - ano_nascimento
+
+if idade >= 16:
+    print("Você pode votar este ano!")
+else:
+    print("Você não pode votar este ano.")ano_nascimento = int(input("Digite o ano de nascimento: "))
+
+ano_atual = 2023
+idade = ano_atual - ano_nascimento
+
+if idade >= 16:
+    print("Você pode votar este ano!")
+else:
+    print("Você não pode votar este ano.")
+ATIVIDADE 3
+def verifica_senha(senha):
+  if len(senha) < 8:
+        return False
+
+    
+    if not any(c.isupper() for c in senha):
+        return False
+
+    
+    if not any(c.islower() for c in senha):
+        return False
+
+    
+    if not any(c.isdigit() for c in senha):
+        return False
+    return True
+senha = input("Digite a senha: ")
+if verifica_senha(senha):
+    print("Senha válida")
+else:
+    print("Senha inválida")
+ATIVDADE 4
+def calcular_peso_ideal(altura, genero):
+    if genero == 'homem':
+        peso_ideal = (altura - 100) - ((altura - 150) / 4)
+    elif genero == 'mulher':
+        peso_ideal = (altura - 100) - ((altura - 150) / 2.5)
+    else:
+        return "Gênero não reconhecido."
+    
+    return peso_ideal
+
+altura = float(input("Digite a altura em centímetros: "))
+genero = input("Digite o gênero (homem/mulher): ")
+
+peso_ideal = calcular_peso_ideal(altura, genero)
+
+if isinstance(peso_ideal, str):
+    print(peso_ideal)
+else:
+    print("O peso ideal para uma altura de {} cm e gênero {} é {} kg.".format(altura, genero, peso_ideal))
+
+ATIVDADE 5
+...........
+ATIVDADE 6
+import math
+
+numero_lados = int(input("Digite o número de lados do polígono regular: "))
+medida_lado = float(input("Digite a medida do lado (em cm): "))
+
+if numero_lados == 3:
+    area = (math.sqrt(3) * medida_lado ** 2) / 4
+    print("TRIÂNGULO")
+    print("Área: {:.2f} cm²".format(area))
+elif numero_lados == 4:
+    area = medida_lado ** 2
+    print("QUADRADO")
+    print("Área: {:.2f} cm²".format(area))
+elif numero_lados == 5:
+    print("PENTÁGONO")
+else:
+    print("Número de lados não suportado.")
+ATIVDADE 7
+import math
+
+numero_lados = int(input("Digite o número de lados do polígono regular: "))
+medida_lado = float(input("Digite a medida do lado (em cm): "))
+
+if numero_lados < 3:
+    print("NÃO É UM POLÍGONO")
+elif numero_lados == 3:
+    area = (math.sqrt(3) * medida_lado ** 2) / 4
+    print("TRIÂNGULO")
+    print("Área: {:.2f} cm²".format(area))
+elif numero_lados == 4:
+    area = medida_lado ** 2
+    print("QUADRADO")
+    print("Área: {:.2f} cm²".format(area))
+elif numero_lados == 5:
+    print("PENTÁGONO")
+else:
+    print("POLÍGONO NÃO IDENTIFICADO")
